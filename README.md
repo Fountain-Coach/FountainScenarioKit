@@ -9,9 +9,11 @@ It validates a tracked scenario projection, emits admitted/running/terminal life
 replay, and carries typed scenario messages over MIDI 2.0 UMP. `FountainScenarioTestKit` supplies deterministic
 in-memory lifecycle and transport fixtures.
 
-This is a public, reusable infrastructure package. It is the runtime half of Fountain Coach's
+This is a public, reusable infrastructure package. It provides the generic protocol seam for Fountain Coach's
 [Scenario-Driven Development](https://book.fountain.coach/scenario-driven-development/) approach: a scenario is a
 versioned contract that can be executed, observed, and published with the same typed lifecycle as a production peer.
+The method complements TDD, BDD/ATDD, contract testing, and CI; this kit does not replace any of them or claim to be a
+universal test-orchestration framework.
 
 The kit owns no product vocabulary, UI, Store client, credential, model provider, or fixture corpus. A consumer binds
 its operation identity, persistence adapter, actor topology, and independent AX/window witnesses at its boundary.
@@ -20,7 +22,7 @@ its operation identity, persistence adapter, actor topology, and independent AX/
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Fountain-Coach/FountainScenarioKit.git", from: "0.1.0")
+    .package(url: "https://github.com/Fountain-Coach/FountainScenarioKit.git", from: "0.1.1")
 ]
 ```
 
@@ -35,10 +37,11 @@ prerequisites, actors, typed actions, lifecycle events, terminal predicates, and
 implementation. Development, acceptance, and publication therefore share one inspectable identity without making a
 test harness the authority for product behavior.
 
-MIDI 2.0 makes this practical as infrastructure rather than ceremony. Its typed, negotiated, event-oriented transport
-lets a scenario actor communicate with the same operation boundary used by a software peer. Correlation, lifecycle,
-reconnect, and failure can be observed as messages instead of reconstructed from sleeps, polling, or log interpretation.
-AX, visual capture, and durable Store read-back remain independent witnesses; MIDI2 does not replace them.
+For Fountain Coach systems, MIDI 2.0 makes this a protocol-bound infrastructure seam rather than a private harness.
+Its typed, negotiated, event-oriented transport lets a scenario actor communicate with the same operation boundary
+used by a software peer. Correlation, lifecycle, reconnect, and failure can be observed as messages instead of
+reconstructed from sleeps, polling, or log interpretation. AX, visual capture, and durable Store read-back remain
+independent witnesses; MIDI2 does not replace them.
 
 ## Boundary
 
@@ -50,5 +53,6 @@ to live acceptance.
 
 - [The Book of Reframe](https://book.fountain.coach/) — public human reference and scenario-development history;
 - [Scenario-Driven Development](https://book.fountain.coach/scenario-driven-development/) — the public explanation;
-- [Reframe governance](https://github.com/Fountain-Coach/Reframe-Refactoring) — operational doctrine and boundaries;
-- [Fountain Coach FCIS standards](https://github.com/Fountain-Coach/.github/tree/main/docs) — organization standards.
+- [Chapter 78 — Scenario-Driven Development as org infrastructure](https://github.com/Fountain-Coach/Reframe-Refactoring/blob/main/docs/78-scenario-driven-development-as-org-infrastructure.md) — governance and claim boundary;
+- [Reframe integration](https://github.com/Fountain-Coach/midi2-gpu-fabric) — a consumer binding product operations, Store, AX, and acceptance evidence;
+- [FCIS-KIT standards](https://github.com/Fountain-Coach/.github/tree/main/docs) — organization standards and reusable-kit boundary.
