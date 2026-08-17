@@ -13,7 +13,7 @@ Do not use it for documentation-only edits that change no behaviour.
 1. **Confirm the working tree is the tagged state.** `git status --porcelain` must be empty. A release must not be
    cut from a tree that differs from the commit being tagged (FCIS-KIT-07).
 2. **Run the suite on that commit.** `swift test` must be green. Record the count.
-3. **Check the seam is still generic.** `rg -niE 'Reframe|Storify|Copilot|manuscript|writer' Sources/` must return
+3. **Check the seam is still generic.** `rg -ni -e 'Reframe' -e 'Storify' -e 'Copilot' -e 'manuscript' -e 'writer' Sources/` must return
    nothing. A consumer's vocabulary arriving in this package is a KIT-03 defect, not a naming preference.
 4. **Check the dependency boundary.** `rg -n '\.package\(' Package.swift` may show only the org-owned `midi2`
    package at its declared exact release; path dependencies and unapproved third-party packages are forbidden.
