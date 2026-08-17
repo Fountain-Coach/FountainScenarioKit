@@ -56,3 +56,10 @@ to live acceptance.
 - [Chapter 78 — Scenario-Driven Development as org infrastructure](https://github.com/Fountain-Coach/Reframe-Refactoring/blob/main/docs/78-scenario-driven-development-as-org-infrastructure.md) — governance and claim boundary;
 - [Reframe integration](https://github.com/Fountain-Coach/midi2-gpu-fabric) — a consumer binding product operations, Store, AX, and acceptance evidence;
 - [FCIS-KIT standards](https://github.com/Fountain-Coach/.github/tree/main/docs) — organization standards and reusable-kit boundary.
+
+### Research and terminology notes
+
+The kit uses BDD/ATDD as neighboring practices, not as claims that this package replaces them. For the research
+context, see the [BDD systematic mapping study](https://doi.org/10.1016/j.jss.2023.111749) and the controlled TDD
+study in *Information and Software Technology* ([DOI 10.1016/j.infsof.2011.02.002](https://doi.org/10.1016/j.infsof.2011.02.002)).
+[Cucumber](https://cucumber.io/docs/bdd/) is referenced as a BDD implementation tool, not as scientific evidence.
