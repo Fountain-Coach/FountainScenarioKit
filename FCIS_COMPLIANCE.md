@@ -1,6 +1,6 @@
 # FCIS Compliance — FountainScenarioKit
 
-Assessed at the `v0.1.1` release against the Fountain Coach org standards published in `Fountain-Coach/.github`.
+Assessed at the `v0.2.0` release against the Fountain Coach org standards published in `Fountain-Coach/.github`.
 
 ## Binding
 
@@ -15,15 +15,15 @@ Assessed at the `v0.1.1` release against the Fountain Coach org standards publis
 | KIT-01 | This declaration and the Reframe consumer declaration name the kit and semver mode. |
 | KIT-02 | The only dependency is the org-owned `midi2` package; no new third-party capability is introduced. |
 | KIT-03 | The seam is generic: operation identity, persistence, actor, fixture, and UI decisions are supplied by consumers. |
-| KIT-04 | The package is released as immutable semver `v0.1.0`; consumers use `from: "0.1.0"`. |
+| KIT-04 | The package is released as immutable semver `v0.2.0`; consumers use `from: "0.2.0"`. |
 | KIT-05 | No revision pins. |
 | KIT-06 | No path or external checkout dependencies. |
 | KIT-07 | The release is an annotated tag and GitHub release from a passing package suite. |
-| KIT-08 | The kit is released upstream before Reframe consumes it. |
+| KIT-08 | The kit is released upstream before any consumer consumes the new semantic contract. |
 | KIT-09 | Consumer migration is a single-purpose dependency bump/removal of the in-repo copy. |
 | KIT-10 | Reframe records the release tag and migration commit in its plan. |
-| KIT-11 | The kit suite proves its own lifecycle, codec, contract, persistence, and transport seam. |
-| KIT-12 | No public API is removed in `v0.1.0`. |
+| KIT-11 | The kit suite proves its own lifecycle, codec, semantic contract, persistence, and transport seam. |
+| KIT-12 | No public API is removed in `v0.2.0`; the semantic contract is additive. |
 | KIT-13 | No user interface or rendered output is shipped by this package. |
 
 ### FCIS Publication and Source Policy
