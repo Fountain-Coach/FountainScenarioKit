@@ -9,7 +9,7 @@ let package = Package(
         .library(name: "FountainScenarioTestKit", targets: ["FountainScenarioTestKit"])
     ],
     dependencies: [
-        .package(url: "https://github.com/Fountain-Coach/midi2.git", exact: "0.9.1")
+        .package(url: "https://github.com/Fountain-Coach/midi2.git", exact: "0.12.8")
     ],
     targets: [
         .target(
